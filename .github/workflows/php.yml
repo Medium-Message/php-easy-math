@@ -16,8 +16,11 @@ jobs:
           php-version: ${{ matrix.php }}
       - name: Report PHP version
         run: php -v
+      - name: Make sure we are using composer v1
+        run: |
+          sudo composer self-update --1
+          sudo chown $USER $HOME/.composer        
       - name: Validate composer.json and composer.lock
-        run: composer update
         run: composer validate
       - name: Get Composer Cache Directory
         id: composer-cache
