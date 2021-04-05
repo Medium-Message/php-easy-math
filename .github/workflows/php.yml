@@ -17,6 +17,7 @@ jobs:
       - name: Report PHP version
         run: php -v
       - name: Validate composer.json and composer.lock
+        run: composer update
         run: composer validate
       - name: Get Composer Cache Directory
         id: composer-cache
