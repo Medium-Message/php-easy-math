@@ -10,3 +10,5 @@ echo $add->add(3, 2) . PHP_EOL;
 
 $sub = new Subtraction();
 echo $sub->subtract(3, 2) . PHP_EOL;
+
+echo 'end';
