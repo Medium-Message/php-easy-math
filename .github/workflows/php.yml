@@ -41,8 +41,8 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           comment-author: 'github-actions[bot]'
           body-includes: Build output
-      - name: Create or update comment
-        uses: peter-evans/create-or-update-comment@v1
+      - name: Create or Update Comment
+        uses: peter-evans/create-or-update-comment@v1.4.4
         with:
           comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
